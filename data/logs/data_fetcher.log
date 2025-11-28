@@ -1,0 +1,82 @@
+2025-11-28 23:22:56.964 | INFO     | __main__:__init__:102 - Initialized DataFetcher for 4 tickers
+2025-11-28 23:22:56.965 | INFO     | __main__:fetch_historical_data:145 - Fetching data for: AAPL, GOOGL, MSFT, AMZN
+2025-11-28 23:22:56.965 | INFO     | __main__:fetch_historical_data:146 - Period: 2024-11-28 to 2025-11-28
+2025-11-28 23:22:58.038 | INFO     | __main__:_download_data:195 - ✓ Downloaded 249 days of data
+2025-11-28 23:22:58.038 | INFO     | __main__:_download_data:196 - ✓ Date range: 2024-11-29 to 2025-11-26
+2025-11-28 23:22:58.039 | ERROR    | __main__:fetch_historical_data:160 - Attempt 1/3 failed: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-11-28 23:22:58.099 | INFO     | __main__:_download_data:195 - ✓ Downloaded 249 days of data
+2025-11-28 23:22:58.100 | INFO     | __main__:_download_data:196 - ✓ Date range: 2024-11-29 to 2025-11-26
+2025-11-28 23:22:58.101 | ERROR    | __main__:fetch_historical_data:160 - Attempt 2/3 failed: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-11-28 23:22:58.142 | INFO     | __main__:_download_data:195 - ✓ Downloaded 249 days of data
+2025-11-28 23:22:58.143 | INFO     | __main__:_download_data:196 - ✓ Date range: 2024-11-29 to 2025-11-26
+2025-11-28 23:22:58.144 | ERROR    | __main__:fetch_historical_data:160 - Attempt 3/3 failed: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-11-28 23:22:58.144 | ERROR    | __main__:<module>:402 - Test failed
+Traceback (most recent call last):
+
+  File "D:\Gen AI\Qaunt ML\monte-carlo-portfolio\src\data_fetcher.py", line 154, in fetch_historical_data
+    prices.to_parquet(cache_path)
+    │      │          └ WindowsPath('data/raw/AAPL_AMZN_GOOGL_MSFT_2024-11-28_2025-11-28.parquet')
+    │      └ <function DataFrame.to_parquet at 0x0000022E8CD0FE20>
+    └                   AAPL       GOOGL        MSFT        AMZN
+      Date                                                      
+      2024-11...
+
+  File "D:\Gen AI\Qaunt ML\monte-carlo-portfolio\venv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           │     │       └ {}
+           │     └ (                  AAPL       GOOGL        MSFT        AMZN
+           │       Date                                                      
+           │       2024-1...
+           └ <function DataFrame.to_parquet at 0x0000022E8CD0FD80>
+  File "D:\Gen AI\Qaunt ML\monte-carlo-portfolio\venv\Lib\site-packages\pandas\core\frame.py", line 3124, in to_parquet
+    return to_parquet(
+           └ <function to_parquet at 0x0000022E8DF3F740>
+  File "D:\Gen AI\Qaunt ML\monte-carlo-portfolio\venv\Lib\site-packages\pandas\io\parquet.py", line 478, in to_parquet
+    impl = get_engine(engine)
+           │          └ 'auto'
+           └ <function get_engine at 0x0000022E8DF3EF20>
+  File "D:\Gen AI\Qaunt ML\monte-carlo-portfolio\venv\Lib\site-packages\pandas\io\parquet.py", line 68, in get_engine
+    raise ImportError(
+
+ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+> File "D:\Gen AI\Qaunt ML\monte-carlo-portfolio\src\data_fetcher.py", line 389, in <module>
+    market_data = fetcher.fetch_historical_data(use_cache=True)
+                  │       └ <function DataFetcher.fetch_historical_data at 0x0000022E8F151BC0>
+                  └ <__main__.DataFetcher object at 0x0000022E8EF7B4D0>
+
+  File "D:\Gen AI\Qaunt ML\monte-carlo-portfolio\src\data_fetcher.py", line 162, in fetch_historical_data
+    raise RuntimeError(f"Failed to fetch data after {retry_attempts} attempts")
+                                                     └ 3
+
+RuntimeError: Failed to fetch data after 3 attempts
+2025-11-28 23:24:00.740 | INFO     | __main__:__init__:102 - Initialized DataFetcher for 4 tickers
+2025-11-28 23:24:00.740 | INFO     | __main__:fetch_historical_data:145 - Fetching data for: AAPL, GOOGL, MSFT, AMZN
+2025-11-28 23:24:00.740 | INFO     | __main__:fetch_historical_data:146 - Period: 2024-11-28 to 2025-11-28
+2025-11-28 23:24:01.436 | INFO     | __main__:_download_data:195 - ✓ Downloaded 249 days of data
+2025-11-28 23:24:01.437 | INFO     | __main__:_download_data:196 - ✓ Date range: 2024-11-29 to 2025-11-26
+2025-11-28 23:24:01.812 | SUCCESS  | __main__:fetch_historical_data:155 - ✓ Data cached to: data\raw\AAPL_AMZN_GOOGL_MSFT_2024-11-28_2025-11-28.parquet
+2025-11-28 23:24:01.815 | INFO     | __main__:_calculate_returns:253 - ✓ Calculated returns for 248 trading days
+2025-11-28 23:24:01.863 | SUCCESS  | __main__:export_data:361 - ✓ All data exported to data/processed/

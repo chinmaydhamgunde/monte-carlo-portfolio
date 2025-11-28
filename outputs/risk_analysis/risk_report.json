@@ -1,0 +1,64 @@
+{
+  "var_95": {
+    "value": -12019.37040713688,
+    "percentage": -0.24038740814273757
+  },
+  "var_99": {
+    "value": -22916.121342966188,
+    "percentage": -0.4583224268593238
+  },
+  "cvar_95": {
+    "value": -18654.545871763436,
+    "percentage": -0.37309091743526873
+  },
+  "cvar_99": {
+    "value": -26374.524561144408,
+    "percentage": -0.5274904912228882
+  },
+  "max_drawdown": -0.011648559612963719,
+  "stress_tests": [
+    {
+      "scenario": "2008 Financial Crisis",
+      "loss": 19578.175196954835,
+      "loss_percentage": 0.3915635039390967
+    },
+    {
+      "scenario": "COVID-19 Crash (2020)",
+      "loss": 22841.204396447283,
+      "loss_percentage": 0.4568240879289457
+    },
+    {
+      "scenario": "Dot-com Bubble (2000)",
+      "loss": 16315.145997462358,
+      "loss_percentage": 0.32630291994924715
+    },
+    {
+      "scenario": "Moderate Recession",
+      "loss": 26104.23359593976,
+      "loss_percentage": 0.5220846719187953
+    },
+    {
+      "scenario": "Black Monday (1987)",
+      "loss": 25125.324836092026,
+      "loss_percentage": 0.5025064967218406
+    },
+    {
+      "scenario": "Stagflation Scenario",
+      "loss": 27735.748195686,
+      "loss_percentage": 0.55471496391372
+    }
+  ],
+  "portfolio_statistics": {
+    "mean_return": 0.6526058398984942,
+    "volatility": 0.5021645549677806,
+    "skewness": -0.1370855488097426,
+    "kurtosis": 4.838416263383877,
+    "best_day": 0.17277806977898172,
+    "worst_day": -0.18122567573314835
+  },
+  "risk_adjusted_metrics": {
+    "sortino_ratio": 1.2348699679599227,
+    "semi_deviation": 0.032270946078477296,
+    "calmar_ratio": 56.02459545060035
+  }
+}

@@ -1,0 +1,74 @@
+2025-11-28 23:33:04.004 | INFO     | data_fetcher:__init__:102 - Initialized DataFetcher for 4 tickers
+2025-11-28 23:33:04.005 | INFO     | data_fetcher:fetch_historical_data:136 - Loading data from cache: data\raw\AAPL_AMZN_GOOGL_MSFT_2024-11-28_2025-11-28.parquet
+2025-11-28 23:33:04.059 | SUCCESS  | data_fetcher:fetch_historical_data:139 - ✓ Loaded 249 days from cache
+2025-11-28 23:33:04.060 | INFO     | data_fetcher:_calculate_returns:253 - ✓ Calculated returns for 248 trading days
+2025-11-28 23:33:04.085 | INFO     | monte_carlo_engine:__init__:118 - Initialized Monte Carlo Simulator
+2025-11-28 23:33:04.086 | INFO     | monte_carlo_engine:__init__:119 - Assets: 4, Simulations: 10,000
+2025-11-28 23:33:04.086 | INFO     | monte_carlo_engine:generate_random_portfolios:128 - Starting Monte Carlo simulation with 10,000 iterations...
+2025-11-28 23:33:04.314 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 2,000/10,000 (20.0%)
+2025-11-28 23:33:04.541 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 4,000/10,000 (40.0%)
+2025-11-28 23:33:04.810 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 6,000/10,000 (60.0%)
+2025-11-28 23:33:05.045 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 8,000/10,000 (80.0%)
+2025-11-28 23:33:05.269 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 10,000/10,000 (100.0%)
+2025-11-28 23:33:05.270 | SUCCESS  | monte_carlo_engine:generate_random_portfolios:192 - ✓ Simulation complete in 1.18 seconds
+2025-11-28 23:33:05.274 | INFO     | monte_carlo_engine:simulate_portfolio_paths:241 - Simulating 1,000 portfolio paths over 252 days...
+2025-11-28 23:33:05.315 | SUCCESS  | monte_carlo_engine:simulate_portfolio_paths:301 - ✓ Portfolio paths simulated successfully
+2025-11-28 23:33:05.319 | INFO     | risk_calculator:__init__:159 - Initialized Risk Calculator
+2025-11-28 23:33:05.319 | INFO     | risk_calculator:generate_comprehensive_report:521 - Generating comprehensive risk report...
+2025-11-28 23:33:05.324 | INFO     | risk_calculator:stress_test:431 - Running stress tests...
+2025-11-28 23:33:05.326 | SUCCESS  | risk_calculator:stress_test:463 - ✓ Completed 6 stress test scenarios
+2025-11-28 23:33:05.333 | INFO     | __main__:__init__:60 - Initialized Visualizer (style: professional, dpi: 300)
+2025-11-28 23:33:05.333 | INFO     | __main__:plot_efficient_frontier:105 - Creating efficient frontier plot...
+2025-11-28 23:35:22.606 | INFO     | data_fetcher:__init__:102 - Initialized DataFetcher for 4 tickers
+2025-11-28 23:35:22.606 | INFO     | data_fetcher:fetch_historical_data:136 - Loading data from cache: data\raw\AAPL_AMZN_GOOGL_MSFT_2024-11-28_2025-11-28.parquet
+2025-11-28 23:35:22.649 | SUCCESS  | data_fetcher:fetch_historical_data:139 - ✓ Loaded 249 days from cache
+2025-11-28 23:35:22.650 | INFO     | data_fetcher:_calculate_returns:253 - ✓ Calculated returns for 248 trading days
+2025-11-28 23:35:22.677 | INFO     | monte_carlo_engine:__init__:118 - Initialized Monte Carlo Simulator
+2025-11-28 23:35:22.678 | INFO     | monte_carlo_engine:__init__:119 - Assets: 4, Simulations: 10,000
+2025-11-28 23:35:22.678 | INFO     | monte_carlo_engine:generate_random_portfolios:128 - Starting Monte Carlo simulation with 10,000 iterations...
+2025-11-28 23:35:22.924 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 2,000/10,000 (20.0%)
+2025-11-28 23:35:23.160 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 4,000/10,000 (40.0%)
+2025-11-28 23:35:23.395 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 6,000/10,000 (60.0%)
+2025-11-28 23:35:23.627 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 8,000/10,000 (80.0%)
+2025-11-28 23:35:23.861 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 10,000/10,000 (100.0%)
+2025-11-28 23:35:23.862 | SUCCESS  | monte_carlo_engine:generate_random_portfolios:192 - ✓ Simulation complete in 1.18 seconds
+2025-11-28 23:35:23.866 | INFO     | monte_carlo_engine:simulate_portfolio_paths:241 - Simulating 1,000 portfolio paths over 252 days...
+2025-11-28 23:35:23.907 | SUCCESS  | monte_carlo_engine:simulate_portfolio_paths:301 - ✓ Portfolio paths simulated successfully
+2025-11-28 23:35:23.910 | INFO     | risk_calculator:__init__:159 - Initialized Risk Calculator
+2025-11-28 23:35:23.911 | INFO     | risk_calculator:generate_comprehensive_report:521 - Generating comprehensive risk report...
+2025-11-28 23:35:23.915 | INFO     | risk_calculator:stress_test:431 - Running stress tests...
+2025-11-28 23:35:23.917 | SUCCESS  | risk_calculator:stress_test:463 - ✓ Completed 6 stress test scenarios
+2025-11-28 23:35:23.924 | INFO     | __main__:__init__:60 - Initialized Visualizer (style: professional, dpi: 300)
+2025-11-28 23:35:23.925 | INFO     | __main__:plot_efficient_frontier:105 - Creating efficient frontier plot...
+2025-11-28 23:37:08.809 | INFO     | data_fetcher:__init__:102 - Initialized DataFetcher for 4 tickers
+2025-11-28 23:37:08.809 | INFO     | data_fetcher:fetch_historical_data:136 - Loading data from cache: data\raw\AAPL_AMZN_GOOGL_MSFT_2024-11-28_2025-11-28.parquet
+2025-11-28 23:37:08.853 | SUCCESS  | data_fetcher:fetch_historical_data:139 - ✓ Loaded 249 days from cache
+2025-11-28 23:37:08.855 | INFO     | data_fetcher:_calculate_returns:253 - ✓ Calculated returns for 248 trading days
+2025-11-28 23:37:08.880 | INFO     | monte_carlo_engine:__init__:118 - Initialized Monte Carlo Simulator
+2025-11-28 23:37:08.880 | INFO     | monte_carlo_engine:__init__:119 - Assets: 4, Simulations: 10,000
+2025-11-28 23:37:08.880 | INFO     | monte_carlo_engine:generate_random_portfolios:128 - Starting Monte Carlo simulation with 10,000 iterations...
+2025-11-28 23:37:09.115 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 2,000/10,000 (20.0%)
+2025-11-28 23:37:09.357 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 4,000/10,000 (40.0%)
+2025-11-28 23:37:09.608 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 6,000/10,000 (60.0%)
+2025-11-28 23:37:09.837 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 8,000/10,000 (80.0%)
+2025-11-28 23:37:10.072 | INFO     | monte_carlo_engine:generate_random_portfolios:155 -   Progress: 10,000/10,000 (100.0%)
+2025-11-28 23:37:10.073 | SUCCESS  | monte_carlo_engine:generate_random_portfolios:192 - ✓ Simulation complete in 1.19 seconds
+2025-11-28 23:37:10.077 | INFO     | monte_carlo_engine:simulate_portfolio_paths:241 - Simulating 1,000 portfolio paths over 252 days...
+2025-11-28 23:37:10.119 | SUCCESS  | monte_carlo_engine:simulate_portfolio_paths:301 - ✓ Portfolio paths simulated successfully
+2025-11-28 23:37:10.122 | INFO     | risk_calculator:__init__:159 - Initialized Risk Calculator
+2025-11-28 23:37:10.123 | INFO     | risk_calculator:generate_comprehensive_report:521 - Generating comprehensive risk report...
+2025-11-28 23:37:10.127 | INFO     | risk_calculator:stress_test:431 - Running stress tests...
+2025-11-28 23:37:10.130 | SUCCESS  | risk_calculator:stress_test:463 - ✓ Completed 6 stress test scenarios
+2025-11-28 23:37:10.137 | INFO     | __main__:__init__:60 - Initialized Visualizer (style: professional, dpi: 300)
+2025-11-28 23:37:10.138 | INFO     | __main__:plot_efficient_frontier:105 - Creating efficient frontier plot...
+2025-11-28 23:37:10.995 | SUCCESS  | __main__:plot_efficient_frontier:185 - ✓ Saved: outputs\charts\efficient_frontier.png
+2025-11-28 23:37:11.003 | INFO     | __main__:plot_portfolio_distributions:204 - Creating portfolio distribution plots...
+2025-11-28 23:37:11.988 | SUCCESS  | __main__:plot_portfolio_distributions:307 - ✓ Saved: outputs\charts\portfolio_distributions.png
+2025-11-28 23:37:11.995 | INFO     | __main__:plot_asset_allocation:392 - Creating asset allocation chart for Optimal Portfolio (Max Sharpe Ratio)...
+2025-11-28 23:37:12.580 | SUCCESS  | __main__:plot_asset_allocation:443 - ✓ Saved: outputs\charts\asset_allocation.png
+2025-11-28 23:37:12.589 | INFO     | __main__:plot_risk_metrics:466 - Creating risk metrics visualization...
+2025-11-28 23:37:12.971 | SUCCESS  | __main__:plot_risk_metrics:525 - ✓ Saved: outputs\charts\risk_metrics.png
+2025-11-28 23:37:12.978 | INFO     | __main__:plot_stress_test_results:540 - Creating stress test visualization...
+2025-11-28 23:37:13.392 | SUCCESS  | __main__:plot_stress_test_results:588 - ✓ Saved: outputs\charts\stress_test_results.png
+2025-11-28 23:37:13.403 | INFO     | __main__:plot_drawdown_analysis:324 - Creating drawdown analysis plot...
+2025-11-28 23:37:14.157 | SUCCESS  | __main__:plot_drawdown_analysis:373 - ✓ Saved: outputs\charts\drawdown_analysis.png
