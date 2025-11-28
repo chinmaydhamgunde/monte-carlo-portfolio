@@ -1,96 +1,96 @@
 {
   "analysis_metadata": {
-    "run_date": "2025-11-28 23:40:07",
+    "run_date": "2025-11-28 23:57:29",
     "tickers": [
-      "TSLA",
-      "NVDA",
-      "AMD",
-      "INTC"
+      "AAPL",
+      "GOOGL",
+      "MSFT",
+      "AMZN"
     ],
-    "period": "2023-11-29 to 2025-11-28",
-    "initial_investment": 50000.0,
+    "period": "2020-01-01 to 2023-12-31",
+    "initial_investment": 100000,
     "num_simulations": 10000,
     "risk_free_rate": 0.02
   },
   "optimal_portfolio": {
     "weights": {
-      "TSLA": 0.017605915521596564,
-      "NVDA": 0.9673356134992358,
-      "AMD": 0.013757778643050852,
-      "INTC": 0.0013006923361168548
+      "AAPL": 0.5585643437037172,
+      "GOOGL": 0.018271596394396267,
+      "MSFT": 0.42167898367766016,
+      "AMZN": 0.0014850762242262117
     },
-    "expected_return": 0.6526058398984941,
-    "volatility": 0.5021645549677806,
-    "sharpe_ratio": 1.2597580487119062
+    "expected_return": 0.2328388240177802,
+    "volatility": 0.312171346355836,
+    "sharpe_ratio": 0.6818012815794143
   },
   "risk_metrics": {
     "var_95": {
-      "value": -12019.37040713688,
-      "percentage": -0.24038740814273757
+      "value": -28612.325335169757,
+      "percentage": -0.2861232533516976
     },
     "var_99": {
-      "value": -22916.121342966188,
-      "percentage": -0.4583224268593238
+      "value": -41056.17474492516,
+      "percentage": -0.4105617474492516
     },
     "cvar_95": {
-      "value": -18654.545871763436,
-      "percentage": -0.37309091743526873
+      "value": -35943.43334633604,
+      "percentage": -0.35943433346336034
     },
     "cvar_99": {
-      "value": -26374.524561144408,
-      "percentage": -0.5274904912228882
+      "value": -44721.88009591843,
+      "percentage": -0.4472188009591843
     },
-    "max_drawdown": -0.011648559612963719,
+    "max_drawdown": -0.011449763982474338,
     "stress_tests": [
       {
         "scenario": "2008 Financial Crisis",
-        "loss": 19578.175196954835,
-        "loss_percentage": 0.3915635039390967
+        "loss": 13970.329441066817,
+        "loss_percentage": 0.13970329441066817
       },
       {
         "scenario": "COVID-19 Crash (2020)",
-        "loss": 22841.204396447283,
-        "loss_percentage": 0.4568240879289457
+        "loss": 16298.717681244627,
+        "loss_percentage": 0.16298717681244626
       },
       {
         "scenario": "Dot-com Bubble (2000)",
-        "loss": 16315.145997462358,
-        "loss_percentage": 0.32630291994924715
+        "loss": 11641.941200889021,
+        "loss_percentage": 0.11641941200889021
       },
       {
         "scenario": "Moderate Recession",
-        "loss": 26104.23359593976,
-        "loss_percentage": 0.5220846719187953
+        "loss": 18627.105921422422,
+        "loss_percentage": 0.1862710592142242
       },
       {
         "scenario": "Black Monday (1987)",
-        "loss": 25125.324836092026,
-        "loss_percentage": 0.5025064967218406
+        "loss": 17928.589449369087,
+        "loss_percentage": 0.17928589449369087
       },
       {
         "scenario": "Stagflation Scenario",
-        "loss": 27735.748195686,
-        "loss_percentage": 0.55471496391372
+        "loss": 19791.300041511306,
+        "loss_percentage": 0.19791300041511306
       }
     ],
     "portfolio_statistics": {
-      "mean_return": 0.6526058398984942,
-      "volatility": 0.5021645549677806,
-      "skewness": -0.1370855488097426,
-      "kurtosis": 4.838416263383877,
-      "best_day": 0.17277806977898172,
-      "worst_day": -0.18122567573314835
+      "mean_return": 0.2328388240177802,
+      "volatility": 0.312171346355836,
+      "skewness": -0.3033301987371675,
+      "kurtosis": 6.510195882810734,
+      "best_day": 0.12096718496099361,
+      "worst_day": -0.14649881511172297
     },
     "risk_adjusted_metrics": {
-      "sortino_ratio": 1.2348699679599227,
-      "semi_deviation": 0.032270946078477296,
-      "calmar_ratio": 56.02459545060035
+      "sortino_ratio": 0.6610862433046376,
+      "semi_deviation": 0.0202811445482143,
+      "calmar_ratio": 20.33568765034603
     }
   },
   "performance_summary": {
-    "mean_final_value": 95384.54993443636,
-    "median_final_value": 84128.08831016286,
-    "expected_return": 0.9076909986887273,
-    "probability_of_loss": 0.155
+    "mean_final_value": 124788.25609557456,
+    "median_final_value": 120636.02740630243,
+    "expected_return": 0.24788256095574557,
+    "probability_of_loss": 0.28
   }
 }

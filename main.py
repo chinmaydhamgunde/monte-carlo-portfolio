@@ -388,14 +388,18 @@ def main():
     
     results = analyzer.run_complete_analysis()
     
-    # Print summary
+        # Print summary
     print("\n" + "="*80)
     print("ANALYSIS SUMMARY")
     print("="*80)
     print("\n📊 Optimal Portfolio Allocation:")
+    
+    # Show ALL assets, not just > 1%
     for ticker, weight in results['optimal_portfolio']['weights'].items():
-        if weight > 0.01:
+        # Only filter out truly zero weights
+        if weight > 0.001:  # Show anything above 0.1%
             print(f"  {ticker:10s}: {weight*100:>6.2f}%")
+    
     print(f"\n📈 Expected Return:  {results['optimal_portfolio']['expected_return']*100:.2f}%")
     print(f"📉 Volatility:       {results['optimal_portfolio']['volatility']*100:.2f}%")
     print(f"⚡ Sharpe Ratio:     {results['optimal_portfolio']['sharpe_ratio']:.3f}")
@@ -407,6 +411,7 @@ def main():
     print("\n" + "="*80)
     print("📁 All results saved to outputs/ directory")
     print("="*80)
+
 
 
 if __name__ == "__main__":

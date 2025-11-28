@@ -142,3 +142,357 @@ STEP 5/5: Generating Visualizations
 ================================================================================
 2025-11-28 23:40:07.535 | SUCCESS  | __main__:run_complete_analysis:123 - ✅ COMPLETE ANALYSIS FINISHED SUCCESSFULLY!
 2025-11-28 23:40:07.536 | SUCCESS  | __main__:run_complete_analysis:124 - ================================================================================
+2025-11-28 23:52:07.810 | INFO     | __main__:__init__:79 - ================================================================================
+2025-11-28 23:52:07.812 | INFO     | __main__:__init__:80 - MONTE CARLO PORTFOLIO ANALYZER INITIALIZED
+2025-11-28 23:52:07.812 | INFO     | __main__:__init__:81 - ================================================================================
+2025-11-28 23:52:07.812 | INFO     | __main__:__init__:82 - Tickers: AAPL, GOOGL, MSFT, AMZN
+2025-11-28 23:52:07.812 | INFO     | __main__:__init__:83 - Period: 2023-11-29 to 2025-11-28
+2025-11-28 23:52:07.812 | INFO     | __main__:__init__:84 - Initial Investment: $100,000.00
+2025-11-28 23:52:07.813 | INFO     | __main__:__init__:85 - Simulations: 10,000
+2025-11-28 23:52:07.813 | INFO     | __main__:__init__:86 - ================================================================================
+2025-11-28 23:52:07.813 | INFO     | __main__:run_complete_analysis:95 - 
+🚀 Starting Complete Portfolio Analysis Pipeline...
+
+2025-11-28 23:52:07.813 | INFO     | __main__:run_complete_analysis:99 - STEP 1/5: Fetching Historical Market Data
+2025-11-28 23:52:07.814 | INFO     | src.data_fetcher:__init__:102 - Initialized DataFetcher for 4 tickers
+2025-11-28 23:52:07.814 | INFO     | src.data_fetcher:fetch_historical_data:136 - Loading data from cache: data\raw\AAPL_AMZN_GOOGL_MSFT_2023-11-29_2025-11-28.parquet
+2025-11-28 23:52:07.871 | SUCCESS  | src.data_fetcher:fetch_historical_data:139 - ✓ Loaded 501 days from cache
+2025-11-28 23:52:07.873 | INFO     | src.data_fetcher:_calculate_returns:253 - ✓ Calculated returns for 500 trading days
+2025-11-28 23:52:07.904 | SUCCESS  | src.data_fetcher:export_data:361 - ✓ All data exported to data/processed/
+2025-11-28 23:52:07.904 | SUCCESS  | __main__:_fetch_data:145 - ✓ Data fetching complete
+2025-11-28 23:52:07.904 | INFO     | __main__:run_complete_analysis:103 - 
+STEP 2/5: Running Monte Carlo Simulation
+2025-11-28 23:52:07.905 | INFO     | src.monte_carlo_engine:__init__:118 - Initialized Monte Carlo Simulator
+2025-11-28 23:52:07.905 | INFO     | src.monte_carlo_engine:__init__:119 - Assets: 4, Simulations: 10,000
+2025-11-28 23:52:07.905 | INFO     | src.monte_carlo_engine:generate_random_portfolios:128 - Starting Monte Carlo simulation with 10,000 iterations...
+2025-11-28 23:52:08.185 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 2,000/10,000 (20.0%)
+2025-11-28 23:52:08.439 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 4,000/10,000 (40.0%)
+2025-11-28 23:52:08.687 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 6,000/10,000 (60.0%)
+2025-11-28 23:52:08.921 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 8,000/10,000 (80.0%)
+2025-11-28 23:52:09.208 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 10,000/10,000 (100.0%)
+2025-11-28 23:52:09.208 | SUCCESS  | src.monte_carlo_engine:generate_random_portfolios:192 - ✓ Simulation complete in 1.30 seconds
+2025-11-28 23:52:09.212 | INFO     | src.monte_carlo_engine:calculate_efficient_frontier:326 - Calculating efficient frontier with 100 points...
+2025-11-28 23:52:09.216 | SUCCESS  | src.monte_carlo_engine:calculate_efficient_frontier:360 - ✓ Efficient frontier calculated with 93 points
+2025-11-28 23:52:09.300 | SUCCESS  | src.monte_carlo_engine:export_results:447 - ✓ Results exported to outputs/monte_carlo/
+2025-11-28 23:52:09.301 | SUCCESS  | __main__:_run_monte_carlo:161 - ✓ Monte Carlo simulation complete
+2025-11-28 23:52:09.301 | INFO     | __main__:run_complete_analysis:107 - 
+STEP 3/5: Simulating Portfolio Paths
+2025-11-28 23:52:09.301 | INFO     | src.monte_carlo_engine:simulate_portfolio_paths:241 - Simulating 1,000 portfolio paths over 252 days...
+2025-11-28 23:52:09.342 | SUCCESS  | src.monte_carlo_engine:simulate_portfolio_paths:301 - ✓ Portfolio paths simulated successfully
+2025-11-28 23:52:09.344 | SUCCESS  | __main__:_simulate_paths:172 - ✓ Portfolio path simulation complete
+2025-11-28 23:52:09.345 | INFO     | __main__:run_complete_analysis:111 - 
+STEP 4/5: Calculating Risk Metrics
+2025-11-28 23:52:09.346 | INFO     | src.risk_calculator:__init__:159 - Initialized Risk Calculator
+2025-11-28 23:52:09.347 | INFO     | src.risk_calculator:generate_comprehensive_report:521 - Generating comprehensive risk report...
+2025-11-28 23:52:09.352 | INFO     | src.risk_calculator:stress_test:431 - Running stress tests...
+2025-11-28 23:52:09.354 | SUCCESS  | src.risk_calculator:stress_test:463 - ✓ Completed 6 stress test scenarios
+2025-11-28 23:52:09.364 | SUCCESS  | src.risk_calculator:export_risk_report:637 - ✓ Risk report exported to outputs/risk_analysis/
+2025-11-28 23:52:09.364 | SUCCESS  | __main__:_calculate_risk:197 - ✓ Risk analysis complete
+2025-11-28 23:52:09.365 | INFO     | __main__:run_complete_analysis:115 - 
+STEP 5/5: Generating Visualizations
+2025-11-28 23:52:09.366 | INFO     | src.visualizer:__init__:60 - Initialized Visualizer (style: professional, dpi: 300)
+2025-11-28 23:52:09.367 | INFO     | src.visualizer:plot_efficient_frontier:105 - Creating efficient frontier plot...
+2025-11-28 23:52:10.243 | SUCCESS  | src.visualizer:plot_efficient_frontier:185 - ✓ Saved: outputs\charts\efficient_frontier.png
+2025-11-28 23:52:10.252 | INFO     | src.visualizer:plot_portfolio_distributions:204 - Creating portfolio distribution plots...
+2025-11-28 23:52:11.270 | SUCCESS  | src.visualizer:plot_portfolio_distributions:307 - ✓ Saved: outputs\charts\portfolio_distributions.png
+2025-11-28 23:52:11.276 | INFO     | src.visualizer:plot_asset_allocation:392 - Creating asset allocation chart for Optimal Portfolio (Max Sharpe Ratio)...
+2025-11-28 23:52:11.784 | SUCCESS  | src.visualizer:plot_asset_allocation:443 - ✓ Saved: outputs\charts\asset_allocation.png
+2025-11-28 23:52:11.791 | INFO     | src.visualizer:plot_risk_metrics:466 - Creating risk metrics visualization...
+2025-11-28 23:52:12.171 | SUCCESS  | src.visualizer:plot_risk_metrics:525 - ✓ Saved: outputs\charts\risk_metrics.png
+2025-11-28 23:52:12.181 | INFO     | src.visualizer:plot_stress_test_results:540 - Creating stress test visualization...
+2025-11-28 23:52:12.593 | SUCCESS  | src.visualizer:plot_stress_test_results:588 - ✓ Saved: outputs\charts\stress_test_results.png
+2025-11-28 23:52:12.603 | INFO     | src.visualizer:plot_drawdown_analysis:324 - Creating drawdown analysis plot...
+2025-11-28 23:52:13.341 | SUCCESS  | src.visualizer:plot_drawdown_analysis:373 - ✓ Saved: outputs\charts\drawdown_analysis.png
+2025-11-28 23:52:13.350 | SUCCESS  | __main__:_create_visualizations:262 - ✓ All visualizations created
+2025-11-28 23:52:13.351 | INFO     | __main__:run_complete_analysis:119 - 
+📊 Exporting Comprehensive Report
+2025-11-28 23:52:13.352 | SUCCESS  | __main__:_export_comprehensive_report:302 - ✓ Comprehensive report exported: outputs\reports\comprehensive_analysis_report.json
+2025-11-28 23:52:13.353 | SUCCESS  | __main__:run_complete_analysis:122 - 
+================================================================================
+2025-11-28 23:52:13.353 | SUCCESS  | __main__:run_complete_analysis:123 - ✅ COMPLETE ANALYSIS FINISHED SUCCESSFULLY!
+2025-11-28 23:52:13.354 | SUCCESS  | __main__:run_complete_analysis:124 - ================================================================================
+2025-11-28 23:55:09.686 | INFO     | __main__:__init__:79 - ================================================================================
+2025-11-28 23:55:09.686 | INFO     | __main__:__init__:80 - MONTE CARLO PORTFOLIO ANALYZER INITIALIZED
+2025-11-28 23:55:09.687 | INFO     | __main__:__init__:81 - ================================================================================
+2025-11-28 23:55:09.687 | INFO     | __main__:__init__:82 - Tickers: AAPL, GOOGL, MSFT, AMZN
+2025-11-28 23:55:09.687 | INFO     | __main__:__init__:83 - Period: 2023-11-29 to 2025-11-28
+2025-11-28 23:55:09.687 | INFO     | __main__:__init__:84 - Initial Investment: $100,000.00
+2025-11-28 23:55:09.688 | INFO     | __main__:__init__:85 - Simulations: 10,000
+2025-11-28 23:55:09.688 | INFO     | __main__:__init__:86 - ================================================================================
+2025-11-28 23:55:09.688 | INFO     | __main__:run_complete_analysis:95 - 
+🚀 Starting Complete Portfolio Analysis Pipeline...
+
+2025-11-28 23:55:09.688 | INFO     | __main__:run_complete_analysis:99 - STEP 1/5: Fetching Historical Market Data
+2025-11-28 23:55:09.689 | INFO     | src.data_fetcher:__init__:102 - Initialized DataFetcher for 4 tickers
+2025-11-28 23:55:09.689 | INFO     | src.data_fetcher:fetch_historical_data:136 - Loading data from cache: data\raw\AAPL_AMZN_GOOGL_MSFT_2023-11-29_2025-11-28.parquet
+2025-11-28 23:55:09.735 | SUCCESS  | src.data_fetcher:fetch_historical_data:139 - ✓ Loaded 501 days from cache
+2025-11-28 23:55:09.737 | INFO     | src.data_fetcher:_calculate_returns:253 - ✓ Calculated returns for 500 trading days
+2025-11-28 23:55:09.768 | SUCCESS  | src.data_fetcher:export_data:361 - ✓ All data exported to data/processed/
+2025-11-28 23:55:09.769 | SUCCESS  | __main__:_fetch_data:145 - ✓ Data fetching complete
+2025-11-28 23:55:09.769 | INFO     | __main__:run_complete_analysis:103 - 
+STEP 2/5: Running Monte Carlo Simulation
+2025-11-28 23:55:09.769 | INFO     | src.monte_carlo_engine:__init__:118 - Initialized Monte Carlo Simulator
+2025-11-28 23:55:09.769 | INFO     | src.monte_carlo_engine:__init__:119 - Assets: 4, Simulations: 10,000
+2025-11-28 23:55:09.770 | INFO     | src.monte_carlo_engine:generate_random_portfolios:128 - Starting Monte Carlo simulation with 10,000 iterations...
+2025-11-28 23:55:10.006 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 2,000/10,000 (20.0%)
+2025-11-28 23:55:10.254 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 4,000/10,000 (40.0%)
+2025-11-28 23:55:10.501 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 6,000/10,000 (60.0%)
+2025-11-28 23:55:10.738 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 8,000/10,000 (80.0%)
+2025-11-28 23:55:11.012 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 10,000/10,000 (100.0%)
+2025-11-28 23:55:11.012 | SUCCESS  | src.monte_carlo_engine:generate_random_portfolios:192 - ✓ Simulation complete in 1.24 seconds
+2025-11-28 23:55:11.015 | INFO     | src.monte_carlo_engine:calculate_efficient_frontier:326 - Calculating efficient frontier with 100 points...
+2025-11-28 23:55:11.018 | SUCCESS  | src.monte_carlo_engine:calculate_efficient_frontier:360 - ✓ Efficient frontier calculated with 93 points
+2025-11-28 23:55:11.099 | SUCCESS  | src.monte_carlo_engine:export_results:447 - ✓ Results exported to outputs/monte_carlo/
+2025-11-28 23:55:11.099 | SUCCESS  | __main__:_run_monte_carlo:161 - ✓ Monte Carlo simulation complete
+2025-11-28 23:55:11.099 | INFO     | __main__:run_complete_analysis:107 - 
+STEP 3/5: Simulating Portfolio Paths
+2025-11-28 23:55:11.099 | INFO     | src.monte_carlo_engine:simulate_portfolio_paths:241 - Simulating 1,000 portfolio paths over 252 days...
+2025-11-28 23:55:11.144 | SUCCESS  | src.monte_carlo_engine:simulate_portfolio_paths:301 - ✓ Portfolio paths simulated successfully
+2025-11-28 23:55:11.146 | SUCCESS  | __main__:_simulate_paths:172 - ✓ Portfolio path simulation complete
+2025-11-28 23:55:11.146 | INFO     | __main__:run_complete_analysis:111 - 
+STEP 4/5: Calculating Risk Metrics
+2025-11-28 23:55:11.147 | INFO     | src.risk_calculator:__init__:159 - Initialized Risk Calculator
+2025-11-28 23:55:11.148 | INFO     | src.risk_calculator:generate_comprehensive_report:521 - Generating comprehensive risk report...
+2025-11-28 23:55:11.152 | INFO     | src.risk_calculator:stress_test:431 - Running stress tests...
+2025-11-28 23:55:11.156 | SUCCESS  | src.risk_calculator:stress_test:463 - ✓ Completed 6 stress test scenarios
+2025-11-28 23:55:11.166 | SUCCESS  | src.risk_calculator:export_risk_report:637 - ✓ Risk report exported to outputs/risk_analysis/
+2025-11-28 23:55:11.167 | SUCCESS  | __main__:_calculate_risk:197 - ✓ Risk analysis complete
+2025-11-28 23:55:11.167 | INFO     | __main__:run_complete_analysis:115 - 
+STEP 5/5: Generating Visualizations
+2025-11-28 23:55:11.168 | INFO     | src.visualizer:__init__:60 - Initialized Visualizer (style: professional, dpi: 300)
+2025-11-28 23:55:11.168 | INFO     | src.visualizer:plot_efficient_frontier:105 - Creating efficient frontier plot...
+2025-11-28 23:55:12.006 | SUCCESS  | src.visualizer:plot_efficient_frontier:185 - ✓ Saved: outputs\charts\efficient_frontier.png
+2025-11-28 23:55:12.015 | INFO     | src.visualizer:plot_portfolio_distributions:204 - Creating portfolio distribution plots...
+2025-11-28 23:55:12.997 | SUCCESS  | src.visualizer:plot_portfolio_distributions:307 - ✓ Saved: outputs\charts\portfolio_distributions.png
+2025-11-28 23:55:13.006 | INFO     | src.visualizer:plot_asset_allocation:392 - Creating asset allocation chart for Optimal Portfolio (Max Sharpe Ratio)...
+2025-11-28 23:55:13.528 | SUCCESS  | src.visualizer:plot_asset_allocation:443 - ✓ Saved: outputs\charts\asset_allocation.png
+2025-11-28 23:55:13.536 | INFO     | src.visualizer:plot_risk_metrics:466 - Creating risk metrics visualization...
+2025-11-28 23:55:13.922 | SUCCESS  | src.visualizer:plot_risk_metrics:525 - ✓ Saved: outputs\charts\risk_metrics.png
+2025-11-28 23:55:13.930 | INFO     | src.visualizer:plot_stress_test_results:540 - Creating stress test visualization...
+2025-11-28 23:55:14.399 | SUCCESS  | src.visualizer:plot_stress_test_results:588 - ✓ Saved: outputs\charts\stress_test_results.png
+2025-11-28 23:55:14.411 | INFO     | src.visualizer:plot_drawdown_analysis:324 - Creating drawdown analysis plot...
+2025-11-28 23:55:15.275 | SUCCESS  | src.visualizer:plot_drawdown_analysis:373 - ✓ Saved: outputs\charts\drawdown_analysis.png
+2025-11-28 23:55:15.282 | SUCCESS  | __main__:_create_visualizations:262 - ✓ All visualizations created
+2025-11-28 23:55:15.282 | INFO     | __main__:run_complete_analysis:119 - 
+📊 Exporting Comprehensive Report
+2025-11-28 23:55:15.283 | SUCCESS  | __main__:_export_comprehensive_report:302 - ✓ Comprehensive report exported: outputs\reports\comprehensive_analysis_report.json
+2025-11-28 23:55:15.284 | SUCCESS  | __main__:run_complete_analysis:122 - 
+================================================================================
+2025-11-28 23:55:15.284 | SUCCESS  | __main__:run_complete_analysis:123 - ✅ COMPLETE ANALYSIS FINISHED SUCCESSFULLY!
+2025-11-28 23:55:15.284 | SUCCESS  | __main__:run_complete_analysis:124 - ================================================================================
+2025-11-28 23:55:41.256 | INFO     | __main__:__init__:79 - ================================================================================
+2025-11-28 23:55:41.256 | INFO     | __main__:__init__:80 - MONTE CARLO PORTFOLIO ANALYZER INITIALIZED
+2025-11-28 23:55:41.257 | INFO     | __main__:__init__:81 - ================================================================================
+2025-11-28 23:55:41.257 | INFO     | __main__:__init__:82 - Tickers: AAPL, GOOGL, JPM, GS, BAC
+2025-11-28 23:55:41.257 | INFO     | __main__:__init__:83 - Period: 2023-11-29 to 2025-11-28
+2025-11-28 23:55:41.257 | INFO     | __main__:__init__:84 - Initial Investment: $100,000.00
+2025-11-28 23:55:41.257 | INFO     | __main__:__init__:85 - Simulations: 10,000
+2025-11-28 23:55:41.258 | INFO     | __main__:__init__:86 - ================================================================================
+2025-11-28 23:55:41.258 | INFO     | __main__:run_complete_analysis:95 - 
+🚀 Starting Complete Portfolio Analysis Pipeline...
+
+2025-11-28 23:55:41.258 | INFO     | __main__:run_complete_analysis:99 - STEP 1/5: Fetching Historical Market Data
+2025-11-28 23:55:41.258 | INFO     | src.data_fetcher:__init__:102 - Initialized DataFetcher for 5 tickers
+2025-11-28 23:55:41.259 | INFO     | src.data_fetcher:fetch_historical_data:145 - Fetching data for: AAPL, GOOGL, JPM, GS, BAC
+2025-11-28 23:55:41.259 | INFO     | src.data_fetcher:fetch_historical_data:146 - Period: 2023-11-29 to 2025-11-28
+2025-11-28 23:55:45.641 | INFO     | src.data_fetcher:_download_data:195 - ✓ Downloaded 501 days of data
+2025-11-28 23:55:45.642 | INFO     | src.data_fetcher:_download_data:196 - ✓ Date range: 2023-11-29 to 2025-11-26
+2025-11-28 23:55:45.691 | SUCCESS  | src.data_fetcher:fetch_historical_data:155 - ✓ Data cached to: data\raw\AAPL_BAC_GOOGL_GS_JPM_2023-11-29_2025-11-28.parquet
+2025-11-28 23:55:45.692 | INFO     | src.data_fetcher:_calculate_returns:253 - ✓ Calculated returns for 500 trading days
+2025-11-28 23:55:45.725 | SUCCESS  | src.data_fetcher:export_data:361 - ✓ All data exported to data/processed/
+2025-11-28 23:55:45.726 | SUCCESS  | __main__:_fetch_data:145 - ✓ Data fetching complete
+2025-11-28 23:55:45.726 | INFO     | __main__:run_complete_analysis:103 - 
+STEP 2/5: Running Monte Carlo Simulation
+2025-11-28 23:55:45.726 | INFO     | src.monte_carlo_engine:__init__:118 - Initialized Monte Carlo Simulator
+2025-11-28 23:55:45.727 | INFO     | src.monte_carlo_engine:__init__:119 - Assets: 5, Simulations: 10,000
+2025-11-28 23:55:45.727 | INFO     | src.monte_carlo_engine:generate_random_portfolios:128 - Starting Monte Carlo simulation with 10,000 iterations...
+2025-11-28 23:55:45.967 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 2,000/10,000 (20.0%)
+2025-11-28 23:55:46.195 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 4,000/10,000 (40.0%)
+2025-11-28 23:55:46.436 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 6,000/10,000 (60.0%)
+2025-11-28 23:55:46.666 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 8,000/10,000 (80.0%)
+2025-11-28 23:55:46.909 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 10,000/10,000 (100.0%)
+2025-11-28 23:55:46.909 | SUCCESS  | src.monte_carlo_engine:generate_random_portfolios:192 - ✓ Simulation complete in 1.18 seconds
+2025-11-28 23:55:46.911 | INFO     | src.monte_carlo_engine:calculate_efficient_frontier:326 - Calculating efficient frontier with 100 points...
+2025-11-28 23:55:46.915 | SUCCESS  | src.monte_carlo_engine:calculate_efficient_frontier:360 - ✓ Efficient frontier calculated with 88 points
+2025-11-28 23:55:47.024 | SUCCESS  | src.monte_carlo_engine:export_results:447 - ✓ Results exported to outputs/monte_carlo/
+2025-11-28 23:55:47.024 | SUCCESS  | __main__:_run_monte_carlo:161 - ✓ Monte Carlo simulation complete
+2025-11-28 23:55:47.025 | INFO     | __main__:run_complete_analysis:107 - 
+STEP 3/5: Simulating Portfolio Paths
+2025-11-28 23:55:47.025 | INFO     | src.monte_carlo_engine:simulate_portfolio_paths:241 - Simulating 1,000 portfolio paths over 252 days...
+2025-11-28 23:55:47.069 | SUCCESS  | src.monte_carlo_engine:simulate_portfolio_paths:301 - ✓ Portfolio paths simulated successfully
+2025-11-28 23:55:47.071 | SUCCESS  | __main__:_simulate_paths:172 - ✓ Portfolio path simulation complete
+2025-11-28 23:55:47.071 | INFO     | __main__:run_complete_analysis:111 - 
+STEP 4/5: Calculating Risk Metrics
+2025-11-28 23:55:47.072 | INFO     | src.risk_calculator:__init__:159 - Initialized Risk Calculator
+2025-11-28 23:55:47.073 | INFO     | src.risk_calculator:generate_comprehensive_report:521 - Generating comprehensive risk report...
+2025-11-28 23:55:47.077 | INFO     | src.risk_calculator:stress_test:431 - Running stress tests...
+2025-11-28 23:55:47.080 | SUCCESS  | src.risk_calculator:stress_test:463 - ✓ Completed 6 stress test scenarios
+2025-11-28 23:55:47.087 | SUCCESS  | src.risk_calculator:export_risk_report:637 - ✓ Risk report exported to outputs/risk_analysis/
+2025-11-28 23:55:47.088 | SUCCESS  | __main__:_calculate_risk:197 - ✓ Risk analysis complete
+2025-11-28 23:55:47.088 | INFO     | __main__:run_complete_analysis:115 - 
+STEP 5/5: Generating Visualizations
+2025-11-28 23:55:47.088 | INFO     | src.visualizer:__init__:60 - Initialized Visualizer (style: professional, dpi: 300)
+2025-11-28 23:55:47.089 | INFO     | src.visualizer:plot_efficient_frontier:105 - Creating efficient frontier plot...
+2025-11-28 23:55:47.906 | SUCCESS  | src.visualizer:plot_efficient_frontier:185 - ✓ Saved: outputs\charts\efficient_frontier.png
+2025-11-28 23:55:47.931 | INFO     | src.visualizer:plot_portfolio_distributions:204 - Creating portfolio distribution plots...
+2025-11-28 23:55:48.840 | SUCCESS  | src.visualizer:plot_portfolio_distributions:307 - ✓ Saved: outputs\charts\portfolio_distributions.png
+2025-11-28 23:55:48.851 | INFO     | src.visualizer:plot_asset_allocation:392 - Creating asset allocation chart for Optimal Portfolio (Max Sharpe Ratio)...
+2025-11-28 23:55:49.345 | SUCCESS  | src.visualizer:plot_asset_allocation:443 - ✓ Saved: outputs\charts\asset_allocation.png
+2025-11-28 23:55:49.354 | INFO     | src.visualizer:plot_risk_metrics:466 - Creating risk metrics visualization...
+2025-11-28 23:55:49.773 | SUCCESS  | src.visualizer:plot_risk_metrics:525 - ✓ Saved: outputs\charts\risk_metrics.png
+2025-11-28 23:55:49.781 | INFO     | src.visualizer:plot_stress_test_results:540 - Creating stress test visualization...
+2025-11-28 23:55:50.228 | SUCCESS  | src.visualizer:plot_stress_test_results:588 - ✓ Saved: outputs\charts\stress_test_results.png
+2025-11-28 23:55:50.237 | INFO     | src.visualizer:plot_drawdown_analysis:324 - Creating drawdown analysis plot...
+2025-11-28 23:55:51.003 | SUCCESS  | src.visualizer:plot_drawdown_analysis:373 - ✓ Saved: outputs\charts\drawdown_analysis.png
+2025-11-28 23:55:51.014 | SUCCESS  | __main__:_create_visualizations:262 - ✓ All visualizations created
+2025-11-28 23:55:51.014 | INFO     | __main__:run_complete_analysis:119 - 
+📊 Exporting Comprehensive Report
+2025-11-28 23:55:51.016 | SUCCESS  | __main__:_export_comprehensive_report:302 - ✓ Comprehensive report exported: outputs\reports\comprehensive_analysis_report.json
+2025-11-28 23:55:51.016 | SUCCESS  | __main__:run_complete_analysis:122 - 
+================================================================================
+2025-11-28 23:55:51.016 | SUCCESS  | __main__:run_complete_analysis:123 - ✅ COMPLETE ANALYSIS FINISHED SUCCESSFULLY!
+2025-11-28 23:55:51.016 | SUCCESS  | __main__:run_complete_analysis:124 - ================================================================================
+2025-11-28 23:56:17.016 | INFO     | __main__:__init__:79 - ================================================================================
+2025-11-28 23:56:17.016 | INFO     | __main__:__init__:80 - MONTE CARLO PORTFOLIO ANALYZER INITIALIZED
+2025-11-28 23:56:17.017 | INFO     | __main__:__init__:81 - ================================================================================
+2025-11-28 23:56:17.017 | INFO     | __main__:__init__:82 - Tickers: AAPL, MSFT, NVDA, TSLA, META
+2025-11-28 23:56:17.017 | INFO     | __main__:__init__:83 - Period: 2023-11-29 to 2025-11-28
+2025-11-28 23:56:17.018 | INFO     | __main__:__init__:84 - Initial Investment: $100,000.00
+2025-11-28 23:56:17.018 | INFO     | __main__:__init__:85 - Simulations: 10,000
+2025-11-28 23:56:17.018 | INFO     | __main__:__init__:86 - ================================================================================
+2025-11-28 23:56:17.018 | INFO     | __main__:run_complete_analysis:95 - 
+🚀 Starting Complete Portfolio Analysis Pipeline...
+
+2025-11-28 23:56:17.018 | INFO     | __main__:run_complete_analysis:99 - STEP 1/5: Fetching Historical Market Data
+2025-11-28 23:56:17.019 | INFO     | src.data_fetcher:__init__:102 - Initialized DataFetcher for 5 tickers
+2025-11-28 23:56:17.019 | INFO     | src.data_fetcher:fetch_historical_data:145 - Fetching data for: AAPL, MSFT, NVDA, TSLA, META
+2025-11-28 23:56:17.019 | INFO     | src.data_fetcher:fetch_historical_data:146 - Period: 2023-11-29 to 2025-11-28
+2025-11-28 23:56:17.751 | INFO     | src.data_fetcher:_download_data:195 - ✓ Downloaded 501 days of data
+2025-11-28 23:56:17.752 | INFO     | src.data_fetcher:_download_data:196 - ✓ Date range: 2023-11-29 to 2025-11-26
+2025-11-28 23:56:17.779 | SUCCESS  | src.data_fetcher:fetch_historical_data:155 - ✓ Data cached to: data\raw\AAPL_META_MSFT_NVDA_TSLA_2023-11-29_2025-11-28.parquet
+2025-11-28 23:56:17.780 | INFO     | src.data_fetcher:_calculate_returns:253 - ✓ Calculated returns for 500 trading days
+2025-11-28 23:56:17.817 | SUCCESS  | src.data_fetcher:export_data:361 - ✓ All data exported to data/processed/
+2025-11-28 23:56:17.817 | SUCCESS  | __main__:_fetch_data:145 - ✓ Data fetching complete
+2025-11-28 23:56:17.817 | INFO     | __main__:run_complete_analysis:103 - 
+STEP 2/5: Running Monte Carlo Simulation
+2025-11-28 23:56:17.818 | INFO     | src.monte_carlo_engine:__init__:118 - Initialized Monte Carlo Simulator
+2025-11-28 23:56:17.818 | INFO     | src.monte_carlo_engine:__init__:119 - Assets: 5, Simulations: 10,000
+2025-11-28 23:56:17.818 | INFO     | src.monte_carlo_engine:generate_random_portfolios:128 - Starting Monte Carlo simulation with 10,000 iterations...
+2025-11-28 23:56:18.056 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 2,000/10,000 (20.0%)
+2025-11-28 23:56:18.287 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 4,000/10,000 (40.0%)
+2025-11-28 23:56:18.508 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 6,000/10,000 (60.0%)
+2025-11-28 23:56:18.726 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 8,000/10,000 (80.0%)
+2025-11-28 23:56:18.951 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 10,000/10,000 (100.0%)
+2025-11-28 23:56:18.952 | SUCCESS  | src.monte_carlo_engine:generate_random_portfolios:192 - ✓ Simulation complete in 1.13 seconds
+2025-11-28 23:56:18.954 | INFO     | src.monte_carlo_engine:calculate_efficient_frontier:326 - Calculating efficient frontier with 100 points...
+2025-11-28 23:56:18.959 | SUCCESS  | src.monte_carlo_engine:calculate_efficient_frontier:360 - ✓ Efficient frontier calculated with 94 points
+2025-11-28 23:56:19.081 | SUCCESS  | src.monte_carlo_engine:export_results:447 - ✓ Results exported to outputs/monte_carlo/
+2025-11-28 23:56:19.081 | SUCCESS  | __main__:_run_monte_carlo:161 - ✓ Monte Carlo simulation complete
+2025-11-28 23:56:19.081 | INFO     | __main__:run_complete_analysis:107 - 
+STEP 3/5: Simulating Portfolio Paths
+2025-11-28 23:56:19.082 | INFO     | src.monte_carlo_engine:simulate_portfolio_paths:241 - Simulating 1,000 portfolio paths over 252 days...
+2025-11-28 23:56:19.130 | SUCCESS  | src.monte_carlo_engine:simulate_portfolio_paths:301 - ✓ Portfolio paths simulated successfully
+2025-11-28 23:56:19.131 | SUCCESS  | __main__:_simulate_paths:172 - ✓ Portfolio path simulation complete
+2025-11-28 23:56:19.131 | INFO     | __main__:run_complete_analysis:111 - 
+STEP 4/5: Calculating Risk Metrics
+2025-11-28 23:56:19.132 | INFO     | src.risk_calculator:__init__:159 - Initialized Risk Calculator
+2025-11-28 23:56:19.133 | INFO     | src.risk_calculator:generate_comprehensive_report:521 - Generating comprehensive risk report...
+2025-11-28 23:56:19.136 | INFO     | src.risk_calculator:stress_test:431 - Running stress tests...
+2025-11-28 23:56:19.139 | SUCCESS  | src.risk_calculator:stress_test:463 - ✓ Completed 6 stress test scenarios
+2025-11-28 23:56:19.148 | SUCCESS  | src.risk_calculator:export_risk_report:637 - ✓ Risk report exported to outputs/risk_analysis/
+2025-11-28 23:56:19.149 | SUCCESS  | __main__:_calculate_risk:197 - ✓ Risk analysis complete
+2025-11-28 23:56:19.149 | INFO     | __main__:run_complete_analysis:115 - 
+STEP 5/5: Generating Visualizations
+2025-11-28 23:56:19.150 | INFO     | src.visualizer:__init__:60 - Initialized Visualizer (style: professional, dpi: 300)
+2025-11-28 23:56:19.150 | INFO     | src.visualizer:plot_efficient_frontier:105 - Creating efficient frontier plot...
+2025-11-28 23:56:20.053 | SUCCESS  | src.visualizer:plot_efficient_frontier:185 - ✓ Saved: outputs\charts\efficient_frontier.png
+2025-11-28 23:56:20.078 | INFO     | src.visualizer:plot_portfolio_distributions:204 - Creating portfolio distribution plots...
+2025-11-28 23:56:21.039 | SUCCESS  | src.visualizer:plot_portfolio_distributions:307 - ✓ Saved: outputs\charts\portfolio_distributions.png
+2025-11-28 23:56:21.050 | INFO     | src.visualizer:plot_asset_allocation:392 - Creating asset allocation chart for Optimal Portfolio (Max Sharpe Ratio)...
+2025-11-28 23:56:21.565 | SUCCESS  | src.visualizer:plot_asset_allocation:443 - ✓ Saved: outputs\charts\asset_allocation.png
+2025-11-28 23:56:21.571 | INFO     | src.visualizer:plot_risk_metrics:466 - Creating risk metrics visualization...
+2025-11-28 23:56:21.930 | SUCCESS  | src.visualizer:plot_risk_metrics:525 - ✓ Saved: outputs\charts\risk_metrics.png
+2025-11-28 23:56:21.936 | INFO     | src.visualizer:plot_stress_test_results:540 - Creating stress test visualization...
+2025-11-28 23:56:22.361 | SUCCESS  | src.visualizer:plot_stress_test_results:588 - ✓ Saved: outputs\charts\stress_test_results.png
+2025-11-28 23:56:22.371 | INFO     | src.visualizer:plot_drawdown_analysis:324 - Creating drawdown analysis plot...
+2025-11-28 23:56:23.162 | SUCCESS  | src.visualizer:plot_drawdown_analysis:373 - ✓ Saved: outputs\charts\drawdown_analysis.png
+2025-11-28 23:56:23.169 | SUCCESS  | __main__:_create_visualizations:262 - ✓ All visualizations created
+2025-11-28 23:56:23.169 | INFO     | __main__:run_complete_analysis:119 - 
+📊 Exporting Comprehensive Report
+2025-11-28 23:56:23.171 | SUCCESS  | __main__:_export_comprehensive_report:302 - ✓ Comprehensive report exported: outputs\reports\comprehensive_analysis_report.json
+2025-11-28 23:56:23.171 | SUCCESS  | __main__:run_complete_analysis:122 - 
+================================================================================
+2025-11-28 23:56:23.171 | SUCCESS  | __main__:run_complete_analysis:123 - ✅ COMPLETE ANALYSIS FINISHED SUCCESSFULLY!
+2025-11-28 23:56:23.171 | SUCCESS  | __main__:run_complete_analysis:124 - ================================================================================
+2025-11-28 23:57:23.628 | INFO     | __main__:__init__:79 - ================================================================================
+2025-11-28 23:57:23.628 | INFO     | __main__:__init__:80 - MONTE CARLO PORTFOLIO ANALYZER INITIALIZED
+2025-11-28 23:57:23.628 | INFO     | __main__:__init__:81 - ================================================================================
+2025-11-28 23:57:23.629 | INFO     | __main__:__init__:82 - Tickers: AAPL, GOOGL, MSFT, AMZN
+2025-11-28 23:57:23.629 | INFO     | __main__:__init__:83 - Period: 2020-01-01 to 2023-12-31
+2025-11-28 23:57:23.629 | INFO     | __main__:__init__:84 - Initial Investment: $100,000.00
+2025-11-28 23:57:23.629 | INFO     | __main__:__init__:85 - Simulations: 10,000
+2025-11-28 23:57:23.629 | INFO     | __main__:__init__:86 - ================================================================================
+2025-11-28 23:57:23.629 | INFO     | __main__:run_complete_analysis:95 - 
+🚀 Starting Complete Portfolio Analysis Pipeline...
+
+2025-11-28 23:57:23.629 | INFO     | __main__:run_complete_analysis:99 - STEP 1/5: Fetching Historical Market Data
+2025-11-28 23:57:23.630 | INFO     | src.data_fetcher:__init__:102 - Initialized DataFetcher for 4 tickers
+2025-11-28 23:57:23.630 | INFO     | src.data_fetcher:fetch_historical_data:145 - Fetching data for: AAPL, GOOGL, MSFT, AMZN
+2025-11-28 23:57:23.630 | INFO     | src.data_fetcher:fetch_historical_data:146 - Period: 2020-01-01 to 2023-12-31
+2025-11-28 23:57:24.340 | INFO     | src.data_fetcher:_download_data:195 - ✓ Downloaded 1006 days of data
+2025-11-28 23:57:24.340 | INFO     | src.data_fetcher:_download_data:196 - ✓ Date range: 2020-01-02 to 2023-12-29
+2025-11-28 23:57:24.379 | SUCCESS  | src.data_fetcher:fetch_historical_data:155 - ✓ Data cached to: data\raw\AAPL_AMZN_GOOGL_MSFT_2020-01-01_2023-12-31.parquet
+2025-11-28 23:57:24.381 | INFO     | src.data_fetcher:_calculate_returns:253 - ✓ Calculated returns for 1005 trading days
+2025-11-28 23:57:24.420 | SUCCESS  | src.data_fetcher:export_data:361 - ✓ All data exported to data/processed/
+2025-11-28 23:57:24.420 | SUCCESS  | __main__:_fetch_data:145 - ✓ Data fetching complete
+2025-11-28 23:57:24.420 | INFO     | __main__:run_complete_analysis:103 - 
+STEP 2/5: Running Monte Carlo Simulation
+2025-11-28 23:57:24.421 | INFO     | src.monte_carlo_engine:__init__:118 - Initialized Monte Carlo Simulator
+2025-11-28 23:57:24.421 | INFO     | src.monte_carlo_engine:__init__:119 - Assets: 4, Simulations: 10,000
+2025-11-28 23:57:24.422 | INFO     | src.monte_carlo_engine:generate_random_portfolios:128 - Starting Monte Carlo simulation with 10,000 iterations...
+2025-11-28 23:57:24.663 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 2,000/10,000 (20.0%)
+2025-11-28 23:57:24.885 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 4,000/10,000 (40.0%)
+2025-11-28 23:57:25.100 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 6,000/10,000 (60.0%)
+2025-11-28 23:57:25.330 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 8,000/10,000 (80.0%)
+2025-11-28 23:57:25.560 | INFO     | src.monte_carlo_engine:generate_random_portfolios:155 -   Progress: 10,000/10,000 (100.0%)
+2025-11-28 23:57:25.560 | SUCCESS  | src.monte_carlo_engine:generate_random_portfolios:192 - ✓ Simulation complete in 1.14 seconds
+2025-11-28 23:57:25.563 | INFO     | src.monte_carlo_engine:calculate_efficient_frontier:326 - Calculating efficient frontier with 100 points...
+2025-11-28 23:57:25.568 | SUCCESS  | src.monte_carlo_engine:calculate_efficient_frontier:360 - ✓ Efficient frontier calculated with 89 points
+2025-11-28 23:57:25.675 | SUCCESS  | src.monte_carlo_engine:export_results:447 - ✓ Results exported to outputs/monte_carlo/
+2025-11-28 23:57:25.676 | SUCCESS  | __main__:_run_monte_carlo:161 - ✓ Monte Carlo simulation complete
+2025-11-28 23:57:25.676 | INFO     | __main__:run_complete_analysis:107 - 
+STEP 3/5: Simulating Portfolio Paths
+2025-11-28 23:57:25.676 | INFO     | src.monte_carlo_engine:simulate_portfolio_paths:241 - Simulating 1,000 portfolio paths over 252 days...
+2025-11-28 23:57:25.717 | SUCCESS  | src.monte_carlo_engine:simulate_portfolio_paths:301 - ✓ Portfolio paths simulated successfully
+2025-11-28 23:57:25.718 | SUCCESS  | __main__:_simulate_paths:172 - ✓ Portfolio path simulation complete
+2025-11-28 23:57:25.719 | INFO     | __main__:run_complete_analysis:111 - 
+STEP 4/5: Calculating Risk Metrics
+2025-11-28 23:57:25.720 | INFO     | src.risk_calculator:__init__:159 - Initialized Risk Calculator
+2025-11-28 23:57:25.720 | INFO     | src.risk_calculator:generate_comprehensive_report:521 - Generating comprehensive risk report...
+2025-11-28 23:57:25.724 | INFO     | src.risk_calculator:stress_test:431 - Running stress tests...
+2025-11-28 23:57:25.726 | SUCCESS  | src.risk_calculator:stress_test:463 - ✓ Completed 6 stress test scenarios
+2025-11-28 23:57:25.733 | SUCCESS  | src.risk_calculator:export_risk_report:637 - ✓ Risk report exported to outputs/risk_analysis/
+2025-11-28 23:57:25.733 | SUCCESS  | __main__:_calculate_risk:197 - ✓ Risk analysis complete
+2025-11-28 23:57:25.733 | INFO     | __main__:run_complete_analysis:115 - 
+STEP 5/5: Generating Visualizations
+2025-11-28 23:57:25.734 | INFO     | src.visualizer:__init__:60 - Initialized Visualizer (style: professional, dpi: 300)
+2025-11-28 23:57:25.734 | INFO     | src.visualizer:plot_efficient_frontier:105 - Creating efficient frontier plot...
+2025-11-28 23:57:26.603 | SUCCESS  | src.visualizer:plot_efficient_frontier:185 - ✓ Saved: outputs\charts\efficient_frontier.png
+2025-11-28 23:57:26.631 | INFO     | src.visualizer:plot_portfolio_distributions:204 - Creating portfolio distribution plots...
+2025-11-28 23:57:27.660 | SUCCESS  | src.visualizer:plot_portfolio_distributions:307 - ✓ Saved: outputs\charts\portfolio_distributions.png
+2025-11-28 23:57:27.671 | INFO     | src.visualizer:plot_asset_allocation:392 - Creating asset allocation chart for Optimal Portfolio (Max Sharpe Ratio)...
+2025-11-28 23:57:28.190 | SUCCESS  | src.visualizer:plot_asset_allocation:443 - ✓ Saved: outputs\charts\asset_allocation.png
+2025-11-28 23:57:28.198 | INFO     | src.visualizer:plot_risk_metrics:466 - Creating risk metrics visualization...
+2025-11-28 23:57:28.571 | SUCCESS  | src.visualizer:plot_risk_metrics:525 - ✓ Saved: outputs\charts\risk_metrics.png
+2025-11-28 23:57:28.578 | INFO     | src.visualizer:plot_stress_test_results:540 - Creating stress test visualization...
+2025-11-28 23:57:28.995 | SUCCESS  | src.visualizer:plot_stress_test_results:588 - ✓ Saved: outputs\charts\stress_test_results.png
+2025-11-28 23:57:29.004 | INFO     | src.visualizer:plot_drawdown_analysis:324 - Creating drawdown analysis plot...
+2025-11-28 23:57:29.759 | SUCCESS  | src.visualizer:plot_drawdown_analysis:373 - ✓ Saved: outputs\charts\drawdown_analysis.png
+2025-11-28 23:57:29.765 | SUCCESS  | __main__:_create_visualizations:262 - ✓ All visualizations created
+2025-11-28 23:57:29.766 | INFO     | __main__:run_complete_analysis:119 - 
+📊 Exporting Comprehensive Report
+2025-11-28 23:57:29.767 | SUCCESS  | __main__:_export_comprehensive_report:302 - ✓ Comprehensive report exported: outputs\reports\comprehensive_analysis_report.json
+2025-11-28 23:57:29.767 | SUCCESS  | __main__:run_complete_analysis:122 - 
+================================================================================
+2025-11-28 23:57:29.767 | SUCCESS  | __main__:run_complete_analysis:123 - ✅ COMPLETE ANALYSIS FINISHED SUCCESSFULLY!
+2025-11-28 23:57:29.768 | SUCCESS  | __main__:run_complete_analysis:124 - ================================================================================
